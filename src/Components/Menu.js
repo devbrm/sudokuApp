@@ -47,7 +47,7 @@ function Menu() {
         </nav>
       </section>
       <Switch>
-        <Route path="/" exact component={Sudoku} />
+        <Route path="/sudokuApp" exact component={Sudoku} />
         <Route path="/how-to-play" exact component={HowToPlay} />
         <Route path="/highscores" exact component={Highscores} />
         <Route path="/rate" exact component={Rate} />
