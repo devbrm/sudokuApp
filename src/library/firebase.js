@@ -14,3 +14,4 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 export const db = firebase.database();
 export const ref = db.ref(`highScores`);
+export default firebase
