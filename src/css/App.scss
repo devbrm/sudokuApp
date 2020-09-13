@@ -1,0 +1,276 @@
+$main-color: #685ec2;
+$font-color: #5ac4ee;
+$primary-bg-color: #222;
+$bg-color: #e6e4e4;
+$color: #ddd;
+$container: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "source sans pro", "Arial";
+  height: 100vh;
+  width: 100vw;
+  font-family: "open sans";
+}
+
+a {
+  background: linear-gradient(#a86902ea, #febe56ea);
+  display: inline-block;
+  background-clip: text;
+  transition: 0.3s ease-out;
+  transition-property: filter;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a :hover {
+  filter: brightness(1.5);
+}
+
+//icon hamburger
+.ham-icon {
+  $width: 1.7rem;
+  $height: 4px;
+
+  z-index: 6;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: #fff;
+  height: $height;
+  width: $width;
+  border-radius: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    margin: 7px 0;
+    background: #fff;
+    height: $height;
+    width: $width;
+    border-radius: 30px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    margin: -7px 0;
+    background: #fff;
+    height: $height;
+    width: $width;
+    border-radius: 30px;
+  }
+}
+
+#menu {
+  nav {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    z-index: 5;
+    width: 100vw;
+    min-height: 100vh;
+    height: max-content;
+    background: rgb(0, 0, 0);
+    color: #aaa;
+    font-family: "source sans pro";
+    text-transform: capitalize;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s cubic-bezier(0, 0.86, 0.36, 1);
+
+    & > * {
+      margin: 0.6rem 0;
+    }
+
+    h2 {
+      font-weight: 600;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    & span {
+      padding: 0.5rem;
+    }
+
+    & * {
+      transition: 0.5s cubic-bezier(0, 0.57, 0.58, 1);
+      transition-property: opacity, filter, transform;
+    }
+
+    & > h2:hover,
+    a:hover {
+      filter: brightness(1.5);
+      transform: scale(0.99);
+    }
+  }
+  @media (min-width: 1024px) {
+    nav {
+      max-width: fit-content;
+      text-align: left;
+      justify-content: start;
+      padding: 3rem 1rem;
+      align-items: flex-start;
+      a:hover {
+        border-bottom: 2px solid #febe56;
+      }
+
+      .links-container {
+        align-self: center;
+      }
+    }
+  }
+}
+
+//how to play section
+#how-to-play {
+  min-height: 100vh;
+  width: 100vw;
+  background: #222;
+  color: #eee;
+  text-align: center;
+  padding: 2rem 0;
+
+  * + * {
+    margin-top: 1em;
+  }
+
+  h2 {
+    font-size: 2rem;
+    padding: 0 1rem;
+    color: $main-color;
+  }
+
+  p {
+    max-width: 60ch;
+    font-size: 0.8rem;
+    padding: 0 2rem;
+    margin: 1rem auto;
+    font-weight: 100;
+  }
+
+  ul {
+    padding: 1rem 3rem;
+    background: #333;
+    text-align: center;
+    font-size: 0.75rem;
+
+    li {
+      list-style-type: gujarati;
+      margin-top: 0.5rem;
+      font-weight: 100;
+      padding-left: 0.3rem;
+      width: fit-content;
+      margin: 0.3rem auto;
+    }
+  }
+
+  .video-container {
+    padding: 0 2rem;
+    margin: 2rem auto;
+
+    h2 {
+      margin: 2rem;
+    }
+
+    iframe {
+      margin: 2rem auto;
+      width: 100%;
+      max-width: 300px;
+      height: 100%;
+      display: block;
+    }
+  }
+}
+
+//rate section
+#rate {
+  color: $main-color;
+  padding: 2rem 0;
+  min-height: 100vh;
+  width: 100vw;
+  background: $primary-bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .emojis-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    span {
+      font-size: clamp(4rem, 2.5vw, 5rem);
+      margin-top: 1.5rem;
+      transition: 0.3s cubic-bezier(0, 0.8, 0.58, 1);
+      transition-property: filter, transform;
+      cursor: pointer;
+      user-select: none;
+
+      p {
+        font-size: 1rem;
+        text-align: center;
+        font-family: "Caveat", cursive;
+        color: rgb(202, 158, 12);
+        transition: 0.3s cubic-bezier(0, 0.8, 0.58, 1);
+        transition-property: filter, transform, opacity;
+        opacity: 0;
+      }
+
+      &:hover {
+        filter: brightness(1.5);
+        transform: scale(1.2);
+        p {
+          opacity: 1;
+        }
+      }
+
+      &:active {
+        filter: saturate(1.7);
+        transform: scale(1.17);
+        p {
+          opacity: 1;
+        }
+      }
+
+      &:last-child p {
+        font-size: 2rem;
+        color: rgb(255, 0, 55);
+      }
+    }
+  }
+}
+
+// Utilites classes
+#menu nav.toggleElement {
+  opacity: 0.95;
+  pointer-events: all;
+}
+
+.player-name.invalid {
+  border-bottom: 1px red solid;
+  color: red;
+}
+
+.fields.warning {
+  transform: translate(15px, 5px) scale(1.2) rotate(60deg);
+}
+
+#sudoku-container .popup.display {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}

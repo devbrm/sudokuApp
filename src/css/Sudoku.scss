@@ -1,0 +1,285 @@
+$main-color: #685ec2;
+$font-color: #43caff;
+$primary-bg-color: #222;
+$bg-color: #e6e4e4;
+$color: #ddd;
+$container: #fff;
+
+#sudoku-container {
+  background: radial-gradient($bg-color, darken($bg-color, 10));
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  .popup {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    color: rgb(255, 0, 98);
+    background: rgba(255, 164, 164, 0.7);
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    transition: .7s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-property: transform, opacity;
+    width: max-content;
+    transform: translate(-400%, -50%);
+    opacity: 0;
+  }
+}
+
+header {
+  grid-row: 1/2;
+  background: $primary-bg-color;
+  color: $color;
+  padding: 1rem 0;
+
+  h1 {
+    color: $main-color;
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.7rem;
+    opacity: 0.4;
+  }
+
+  .header-links-container span {
+    padding: 0.4rem;
+    a {
+      color: $main-color;
+      -webkit-text-fill-color: unset;
+    }
+  }
+}
+
+main {
+  grid-row: 2/3;
+  margin: 0 auto;
+
+  .sudokuContainer > .sudoku > {
+    $i: 1;
+    @while $i <= 9 {
+      // to set the border of the rows
+      div:nth-child(3) > input:nth-child(#{$i}),
+      div:nth-child(6) > input:nth-child(#{$i}) {
+        border-bottom: solid 3px $main-color;
+        z-index: 10;
+      }
+
+      // to set the border of the columns
+      div:nth-child(#{$i}) > input:nth-child(3),
+      div:nth-child(#{$i}) > input:nth-child(6) {
+        border-right: solid 3px $main-color;
+        border: no;
+      }
+      $i: $i + 1;
+    }
+  }
+
+  .sudokuContainer {
+    margin: 1rem auto;
+    margin-bottom: 0;
+    max-width: fit-content;
+    padding: 1rem;
+    background: $container;
+    border-radius: 15px;
+    box-shadow: 2px 3px 4px 1px rgba(51, 51, 51, 0.12);
+
+    .sudoku {
+      clip-path: polygon(97% 2%, 97% 98%, 3% 98%, 3% 2%);
+      margin: 0 auto;
+    }
+
+    .rows {
+      min-width: max-content;
+      width: 100%;
+
+      .fields {
+        display: inline-block;
+        width: clamp(1.4rem, 3.2vh, 3rem);
+        height: clamp(1.4rem, 3.2vh, 3rem);
+        text-align: center;
+        font-size: clamp(1rem, 2.5vh, 3rem);
+        font-weight: 100;
+        border: none;
+        color: $font-color;
+        outline: none;
+        transition: 0.5s cubic-bezier(0, 0.68, 0.31, 1.05);
+        transition-property: box-shadow, transform;
+        outline: 1px lighten($color: $main-color, $amount: 25) solid;
+      }
+
+      [readonly] {
+        color: darken($color: $font-color, $amount: 25);
+      }
+    }
+  }
+
+  .time {
+    text-align: right;
+    margin: 1rem;
+    margin-top: 0;
+    font-size: 1rem;
+  }
+
+  .player-name {
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0 0.4rem;
+    font-size: 1.2rem;
+    text-align: left;
+    width: 100%;
+    font-family: "Caveat", cursive;
+    transition: 0.2s ease-in;
+    transition-property: border, color;
+  }
+
+  .options-comtainer {
+    button {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    width: 100%;
+    background: $container;
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px 1px rgba(51, 51, 51, 0.12);
+    padding: 1.2rem 0;
+
+    .undo-redo {
+      button {
+        border-radius: 50%;
+        min-width: 2rem;
+        width: fit-content;
+        height: 2rem;
+        text-align: center;
+        margin-left: 0.7rem;
+        &:last-child {
+          background: none;
+          box-shadow: none;
+        }
+      }
+    }
+
+    .primary-options {
+      width: max-content;
+      padding: 1rem;
+      padding-top: 0.3rem;
+      padding-bottom: 2px;
+      margin: 0 auto;
+      button {
+        margin-left: 3px;
+        color: $main-color;
+        font-size: 1.5rem;
+        width: clamp(1.4rem, 3vh, 3rem);
+        height: clamp(1.4rem, 3vh, 3rem);
+        border-radius: 50%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.rows .fields,
+.options-comtainer button {
+  transition: 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition-property: background, color, filter, outline, transform;
+
+  &:hover {
+    background: lighten($color: $main-color, $amount: 20);
+  }
+
+  &:focus {
+    background: darken($color: $main-color, $amount: 40);
+    color: $main-color;
+  }
+}
+
+//victory message
+
+.victory-message {
+  margin: 0 auto;
+  text-align: center;
+  width: 100vw;
+  font-family: "source sans pro";
+  background: rgb(36, 36, 36);
+  min-height: 100vh;
+  h1 {
+    color: $main-color;
+    font-size: 2.5em;
+    padding: 1rem 0;
+    background: rgb(53, 53, 53);
+  }
+  .gif-continer {
+    max-width: 800px;
+    margin: 1rem auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 400px));
+    grid-auto-flow: dense;
+    grid-auto-rows: auto;
+    gap: 3px;
+    img {
+      justify-self: center;
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}
+
+//Highscores
+#highscores {
+  text-align: center;
+  background: $primary-bg-color;
+  color: $color;
+  min-height: 100vh;
+
+  h2 {
+    color: $main-color;
+    padding: 1rem 0;
+    font-size: 2rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  p {
+    padding: 0.2rem 0.7rem;
+    margin: 0 auto;
+    width: 70%;
+    max-width: 500px;
+    margin-bottom: 0.6rem;
+    border-bottom: 2px solid #ffffff1a;
+    font-family: "Caveat", cursive;
+    font-size: 1.2rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  .time {
+    font-family: "source sans pro";
+    font-size: 1rem;
+    font-weight: 100;
+  }
+}
+
+footer {
+  grid-row: 3/-1;
+  padding: 0.5rem;
+  background: $primary-bg-color;
+  color: $color;
+}
