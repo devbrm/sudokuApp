@@ -14,7 +14,7 @@ function Menu() {
             <Link to="/how-to-play">How to Play</Link>
           </h2>
           <h2>
-            <Link to="/">Play</Link>
+            <Link to="/sudokuApp">Play</Link>
           </h2>
           <h2>
             <Link to="/highscores">view highscores</Link>
@@ -47,10 +47,11 @@ function Menu() {
         </nav>
       </section>
       <Switch>
-        <Route path="/sudokuApp/" exact component={Sudoku} />
-        <Route path="/sudokuApp/how-to-play" exact component={HowToPlay} />
-        <Route path="/sudokuApp/highscores" exact component={Highscores} />
-        <Route path="/sudokuApp/rate" exact component={Rate} />
+        <Route path="/sudokuApp" exact component={Sudoku} />
+        <Route path="/" exact component={Sudoku} />
+        <Route path="/how-to-play" exact component={HowToPlay} />
+        <Route path="/highscores" exact component={Highscores} />
+        <Route path="/rate" exact component={Rate} />
       </Switch>
     </Router>
   );
