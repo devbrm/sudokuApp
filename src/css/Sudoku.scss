@@ -59,6 +59,26 @@ main {
   grid-row: 2/3;
   margin: 0 auto;
 
+  .quote {
+    $value: 25;
+
+    margin: .3em auto;
+    font-family: "Caveat", cursive;
+    font-size: clamp(1rem, 3vw, 2rem);
+    max-width: 40ch;
+    padding: 1rem;
+    color: $main-color;
+    line-height: 0.8;
+    transition: 0.3s ease-out;
+    opacity: 0.2;
+    transition-property: color, opacity;
+
+    &:hover {
+      color: #333;
+      opacity: 1;
+    }
+  }
+
   .sudokuContainer > .sudoku > {
     $i: 1;
     @while $i <= 9 {

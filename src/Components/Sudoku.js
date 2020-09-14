@@ -176,7 +176,9 @@ function Sudoku() {
   return (
     <section id="sudoku-container">
       <header>
-        <div className="popup">Press the back button once to get previous data.</div>
+        <div className="popup">
+          Press the back button once to get previous data.
+        </div>
         <h1>Sudoku Online</h1>
         <div className="header-links-container">
           <span>
@@ -203,7 +205,10 @@ function Sudoku() {
             <Winning />
           ) : (
             <>
-              <div className="qoute">lorem ipsum</div>
+              <div className="quote">
+                A great research says, if you solve one sudoku every day, then after a year you would
+                have solved more than hundred sudokus !
+              </div>
 
               <div className="sudokuContainer">
                 <div className="sudoku">

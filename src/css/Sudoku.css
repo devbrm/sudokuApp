@@ -67,6 +67,26 @@ main {
   margin: 0 auto;
 }
 
+main .quote {
+  margin: .3em auto;
+  font-family: "Caveat", cursive;
+  font-size: clamp(1rem, 3vw, 2rem);
+  max-width: 40ch;
+  padding: 1rem;
+  color: #685ec2;
+  line-height: 0.8;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  opacity: 0.2;
+  -webkit-transition-property: color, opacity;
+  transition-property: color, opacity;
+}
+
+main .quote:hover {
+  color: #333;
+  opacity: 1;
+}
+
 main .sudokuContainer > .sudoku > div:nth-child(3) > span:nth-child(1),
 main .sudokuContainer > .sudoku > div:nth-child(6) > span:nth-child(1) {
   border-bottom: solid 3px #685ec2;
