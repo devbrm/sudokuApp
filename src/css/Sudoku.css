@@ -67,112 +67,103 @@ main {
   margin: 0 auto;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(3) > input:nth-child(1),
-main .sudokuContainer > .sudoku > div:nth-child(6) > input:nth-child(1) {
+main .sudokuContainer > .sudoku > div:nth-child(3) > span:nth-child(1),
+main .sudokuContainer > .sudoku > div:nth-child(6) > span:nth-child(1) {
   border-bottom: solid 3px #685ec2;
   z-index: 10;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(1) > input:nth-child(3),
-main .sudokuContainer > .sudoku > div:nth-child(1) > input:nth-child(6) {
+main .sudokuContainer > .sudoku > div:nth-child(1) > span:nth-child(3),
+main .sudokuContainer > .sudoku > div:nth-child(1) > span:nth-child(6) {
   border-right: solid 3px #685ec2;
-  border: no;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(3) > input:nth-child(2),
-main .sudokuContainer > .sudoku > div:nth-child(6) > input:nth-child(2) {
+main .sudokuContainer > .sudoku > div:nth-child(3) > span:nth-child(2),
+main .sudokuContainer > .sudoku > div:nth-child(6) > span:nth-child(2) {
   border-bottom: solid 3px #685ec2;
   z-index: 10;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(2) > input:nth-child(3),
-main .sudokuContainer > .sudoku > div:nth-child(2) > input:nth-child(6) {
+main .sudokuContainer > .sudoku > div:nth-child(2) > span:nth-child(3),
+main .sudokuContainer > .sudoku > div:nth-child(2) > span:nth-child(6) {
   border-right: solid 3px #685ec2;
-  border: no;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(3) > input:nth-child(3),
-main .sudokuContainer > .sudoku > div:nth-child(6) > input:nth-child(3) {
+main .sudokuContainer > .sudoku > div:nth-child(3) > span:nth-child(3),
+main .sudokuContainer > .sudoku > div:nth-child(6) > span:nth-child(3) {
   border-bottom: solid 3px #685ec2;
   z-index: 10;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(3) > input:nth-child(3),
-main .sudokuContainer > .sudoku > div:nth-child(3) > input:nth-child(6) {
+main .sudokuContainer > .sudoku > div:nth-child(3) > span:nth-child(3),
+main .sudokuContainer > .sudoku > div:nth-child(3) > span:nth-child(6) {
   border-right: solid 3px #685ec2;
-  border: no;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(3) > input:nth-child(4),
-main .sudokuContainer > .sudoku > div:nth-child(6) > input:nth-child(4) {
+main .sudokuContainer > .sudoku > div:nth-child(3) > span:nth-child(4),
+main .sudokuContainer > .sudoku > div:nth-child(6) > span:nth-child(4) {
   border-bottom: solid 3px #685ec2;
   z-index: 10;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(4) > input:nth-child(3),
-main .sudokuContainer > .sudoku > div:nth-child(4) > input:nth-child(6) {
+main .sudokuContainer > .sudoku > div:nth-child(4) > span:nth-child(3),
+main .sudokuContainer > .sudoku > div:nth-child(4) > span:nth-child(6) {
   border-right: solid 3px #685ec2;
-  border: no;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(3) > input:nth-child(5),
-main .sudokuContainer > .sudoku > div:nth-child(6) > input:nth-child(5) {
+main .sudokuContainer > .sudoku > div:nth-child(3) > span:nth-child(5),
+main .sudokuContainer > .sudoku > div:nth-child(6) > span:nth-child(5) {
   border-bottom: solid 3px #685ec2;
   z-index: 10;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(5) > input:nth-child(3),
-main .sudokuContainer > .sudoku > div:nth-child(5) > input:nth-child(6) {
+main .sudokuContainer > .sudoku > div:nth-child(5) > span:nth-child(3),
+main .sudokuContainer > .sudoku > div:nth-child(5) > span:nth-child(6) {
   border-right: solid 3px #685ec2;
-  border: no;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(3) > input:nth-child(6),
-main .sudokuContainer > .sudoku > div:nth-child(6) > input:nth-child(6) {
+main .sudokuContainer > .sudoku > div:nth-child(3) > span:nth-child(6),
+main .sudokuContainer > .sudoku > div:nth-child(6) > span:nth-child(6) {
   border-bottom: solid 3px #685ec2;
   z-index: 10;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(6) > input:nth-child(3),
-main .sudokuContainer > .sudoku > div:nth-child(6) > input:nth-child(6) {
+main .sudokuContainer > .sudoku > div:nth-child(6) > span:nth-child(3),
+main .sudokuContainer > .sudoku > div:nth-child(6) > span:nth-child(6) {
   border-right: solid 3px #685ec2;
-  border: no;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(3) > input:nth-child(7),
-main .sudokuContainer > .sudoku > div:nth-child(6) > input:nth-child(7) {
+main .sudokuContainer > .sudoku > div:nth-child(3) > span:nth-child(7),
+main .sudokuContainer > .sudoku > div:nth-child(6) > span:nth-child(7) {
   border-bottom: solid 3px #685ec2;
   z-index: 10;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(7) > input:nth-child(3),
-main .sudokuContainer > .sudoku > div:nth-child(7) > input:nth-child(6) {
+main .sudokuContainer > .sudoku > div:nth-child(7) > span:nth-child(3),
+main .sudokuContainer > .sudoku > div:nth-child(7) > span:nth-child(6) {
   border-right: solid 3px #685ec2;
-  border: no;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(3) > input:nth-child(8),
-main .sudokuContainer > .sudoku > div:nth-child(6) > input:nth-child(8) {
+main .sudokuContainer > .sudoku > div:nth-child(3) > span:nth-child(8),
+main .sudokuContainer > .sudoku > div:nth-child(6) > span:nth-child(8) {
   border-bottom: solid 3px #685ec2;
   z-index: 10;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(8) > input:nth-child(3),
-main .sudokuContainer > .sudoku > div:nth-child(8) > input:nth-child(6) {
+main .sudokuContainer > .sudoku > div:nth-child(8) > span:nth-child(3),
+main .sudokuContainer > .sudoku > div:nth-child(8) > span:nth-child(6) {
   border-right: solid 3px #685ec2;
-  border: no;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(3) > input:nth-child(9),
-main .sudokuContainer > .sudoku > div:nth-child(6) > input:nth-child(9) {
+main .sudokuContainer > .sudoku > div:nth-child(3) > span:nth-child(9),
+main .sudokuContainer > .sudoku > div:nth-child(6) > span:nth-child(9) {
   border-bottom: solid 3px #685ec2;
   z-index: 10;
 }
 
-main .sudokuContainer > .sudoku > div:nth-child(9) > input:nth-child(3),
-main .sudokuContainer > .sudoku > div:nth-child(9) > input:nth-child(6) {
+main .sudokuContainer > .sudoku > div:nth-child(9) > span:nth-child(3),
+main .sudokuContainer > .sudoku > div:nth-child(9) > span:nth-child(6) {
   border-right: solid 3px #685ec2;
-  border: no;
 }
 
 main .sudokuContainer {
@@ -201,7 +192,11 @@ main .sudokuContainer .rows {
   width: 100%;
 }
 
-main .sudokuContainer .rows .fields {
+main .sudokuContainer .rows span {
+  display: inline-block;
+}
+
+main .sudokuContainer .rows span .fields {
   display: inline-block;
   width: clamp(1.4rem, 3.2vh, 3rem);
   height: clamp(1.4rem, 3.2vh, 3rem);
@@ -220,8 +215,19 @@ main .sudokuContainer .rows .fields {
   outline: 1px #bfbae5 solid;
 }
 
-main .sudokuContainer .rows [readonly] {
+main .sudokuContainer .rows span [readonly] {
   color: #008cc3;
+}
+
+@media (max-width: 1025px) {
+  main .sudokuContainer .sudoku .rows span .fields {
+    background: transparent;
+    pointer-events: none;
+    outline: none;
+  }
+  main .sudokuContainer .sudoku .rows span {
+    border: 1px #bfbae5 solid;
+  }
 }
 
 main .time {
@@ -247,7 +253,7 @@ main .player-name {
 }
 
 main .options-comtainer {
-  width: 100%;
+  margin: 0 1rem;
   background: #fff;
   border-radius: 10px;
   -webkit-box-shadow: 2px 3px 4px 1px rgba(51, 51, 51, 0.12);
@@ -281,26 +287,33 @@ main .options-comtainer .undo-redo button:last-child {
 }
 
 main .options-comtainer .primary-options {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 1rem;
-  padding-top: 0.3rem;
-  padding-bottom: 2px;
-  margin: 0 auto;
+  padding: 0.3rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .options-comtainer .primary-options button {
   margin-left: 3px;
   color: #685ec2;
   font-size: 1.5rem;
-  width: clamp(1.4rem, 3vh, 3rem);
-  height: clamp(1.4rem, 3vh, 3rem);
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   max-width: 100%;
 }
 
 .rows .fields,
+.rows span,
 .options-comtainer button {
   -webkit-transition: 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -311,12 +324,16 @@ main .options-comtainer .primary-options button {
 }
 
 .rows .fields:hover,
+.rows span:hover,
 .options-comtainer button:hover {
   background: #ada8de;
 }
 
-.rows .fields:focus,
-.options-comtainer button:focus {
+.rows .fields:focus, .rows .fields:active,
+.rows span:focus,
+.rows span:active,
+.options-comtainer button:focus,
+.options-comtainer button:active {
   background: #1b173d;
   color: #685ec2;
 }

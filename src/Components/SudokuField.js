@@ -64,8 +64,12 @@ function SudokuField(props) {
     dispatch({ type: "refupdated", payload: newState });
   };
 
+  const handleSpanClick = (e) => {
+    handleClick();
+  };
+
   return (
-    <>
+    <span onClick={handleSpanClick}>
       <input
         ref={inputRef}
         id={id}
@@ -76,7 +80,7 @@ function SudokuField(props) {
         onChange={handleChange}
         value={value || ""}
       ></input>
-    </>
+    </span>
   );
 }
 
