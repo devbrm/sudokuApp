@@ -132,7 +132,7 @@ function Sudoku() {
 
       ref.push({ name, time, string });
     }
-  }, [state]);
+  }, [state.isSolved]);
 
   const popUpForTheOldGame = () => {
     if (window.confirm("Previous game found \n keep it ?")) {
