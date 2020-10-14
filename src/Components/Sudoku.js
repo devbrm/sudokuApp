@@ -182,17 +182,17 @@ function Sudoku() {
         <h1>Sudoku Online</h1>
         <div className="header-links-container">
           <span>
-            <a href="https://devbrm.github.io/portfolio/" target="_blank">
+            <a href="https://developerbrm.github.io/portfolio/" target="_blank">
               <i className="fas fa-2x fa-globe-asia"></i>
             </a>
           </span>
           <span>
-            <a href="https://github.com/devbrm" target="_blank">
+            <a href="https://github.com/developerbrm" target="_blank">
               <i className="fab fa-2x fa-github"></i>
             </a>
           </span>
           <span>
-            <a href="https://www.linkedin.com/in/devbrm/" target="_blank">
+            <a href="https://www.linkedin.com/in/developerbrm/" target="_blank">
               <i className="fab fa-2x fa-linkedin"></i>
             </a>
           </span>
